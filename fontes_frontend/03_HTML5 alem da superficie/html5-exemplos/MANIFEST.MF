@@ -1,0 +1,16 @@
+01	CACHE MANIFEST
+02
+03	CACHE:
+04	images/favicon.ico
+05 images/logo.png
+06	index.html
+07	css/stylesheet.css
+08	js/script.js
+09
+10	NETWORK:
+11	login.php
+12	/application
+13	
+14	FALLBACK:
+15	/index.php /index_offline.html
+16	*.php /offline.html

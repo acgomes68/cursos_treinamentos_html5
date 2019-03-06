@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+ <head>
+  <meta charset="UTF-8">
+  <title>Exemplo Drag and Drop</title>
+  <style>
+  	#arrastavel
+  	{
+ 		position:relative; width:150px; height:90px;
+  		background-color:blue;
+  		text-align: center; font-size: 25px; color: white;
+  		padding-top: 60px;
+  	}
+
+ 	#alvo
+ 	{
+  		position:relative; width:500px; height:300px;
+  		border-color:black; border-style:solid;
+  		font-size: 25px; text-align: center;
+ 	}
+  </style>
+ </head>
+ <body>
+  <!-- Elemento arrastável -->
+  <div id="arrastavel" draggable="true">DevMedia</div>
+  <!-- Elemento Alvo -->
+  <div id="alvo"></div>
+ </body>
+</html>
+<script type="text/javascript">
+	//Elemento arrastável
+	var arrastavel = document.getElementById("arrastavel");
+	// Evento ondragstart - Posso definir informações a serem transferidas
+	arrastavel.ondragstart = function(event) {
+		event.dataTransfer.setData("Info", "HTML5 é demais!");
+	}
+	// Evento ondragend - Ao terminar de arrastar
+	//mudar o posicionamento do objeto
+	arrastavel.ondragend = function(event){
+		this.style.left = event.pageX + "px";
+		this.style.top = event.pageY-150 + "px";
+	}
+	//Elemento alvo
+	var alvo = document.getElementById("alvo");
+
+	//Evento ondragenter - pinta a borda do alvo de azul ao adentrar
+	alvo.ondragenter = function(event) {
+		this.style.borderColor = "blue";
+	}
+	//Evento ondragleave - devolve a coloração original da borda a sair
+	alvo.ondragleave = function(event) {
+		this.style.borderColor = "";
+	}
+	//Evento ondragover - preventDefault()
+	alvo.ondragover = function(event) {
+		event.preventDefault();
+	}
+	//Evento ondrop - Transfere a informação para dentro do alvo
+	alvo.ondrop = function(event) {
+		this.innerHTML = event.dataTransfer.getData("Info");	
+	}
+</script>

@@ -1,0 +1,136 @@
+<html>
+<!--
+  Created using jsbin.com
+  Source can be edited via http://jsbin.com/duvehida/1/edit
+-->
+<head>
+    <link rel="stylesheet" href="estilo.css"/>
+    <meta charset="UTF-8"/>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <h1>Início</h1>
+    
+   <div class="pagina">
+     <div class="container">
+         <div class="linha">			
+             <div class="tile amarelo">
+                 <img src="imagens/flag.png" alt="Windows" />
+                 <span>Windows</span>
+             </div>
+ 		    <div class="tile azul">
+                 <img src="imagens/heart.png" alt="Favoritos" />
+                 <span>Favoritos</span>
+ 		    </div>
+ 		    <div class="tile tileLargo vermelho">
+                 <img src="imagens/browser.png" alt="Navegador" />
+                 <span>Navegador</span>
+ 		    </div>
+ 		    <div class="tile verde">
+                 <img src="imagens/images.png" alt="Imagens" />
+                 <span>Imagens</span>
+ 		    </div>			
+ 		    <div class="tile tileLargo amarelo">
+                 <img src="imagens/questionmark.png" alt="Ajuda" />
+                 <span>Ajuda</span>
+ 		    </div>
+			 <div class="tile verde">
+ 		    </div>
+ 		    <div class="tile vermelho">
+ 		    </div>			
+ 		    <div class="tile tileLargo verde">
+ 		    </div>
+ 		    <div class="tile azul">
+ 		    </div>
+			<div class="tile azul">
+ 		    </div>
+ 	    </div>
+ 	    <div class="linha">			
+ 		    <div class="tile tileLargo amarelo">
+                 <img src="imagens/folder.png" alt="Arquivos" />
+                 <span>Arquivos</span>
+ 		    </div>
+ 		    <div class="tile azul">
+                 <img src="imagens/mail.png" alt="E-mail" />
+                 <span>E-mail</span>
+ 		    </div>			
+ 		    <div class="tile verde">
+                 <img src="imagens/camera.png" alt="Câmera" />
+                 <span>Camera</span>
+ 		    </div>
+ 		    <div class="tile vermelho">
+                 <img src="imagens/music.png" alt="Música" />
+                 <span>Música</span>
+ 		    </div>			
+ 		    <div class="tile tileLargo verde">
+                 <img src="imagens/note.png" alt="Notas" />
+                 <span>Notas</span>  
+ 		    </div>
+			 <div class="tile verde">
+ 		    </div>
+ 		    <div class="tile vermelho">
+ 		    </div>			
+ 		    <div class="tile tileLargo verde">
+ 		    </div>
+ 		    <div class="tile azul">
+ 		    </div>
+			<div class="tile tileLargo verde">
+ 		    </div>
+ 	    </div>		
+ 	    <div class="linha">			
+ 		    <div class="tile amarelo">
+                 <img src="imagens/sun.png" alt="Clima" />
+                 <span>Clima</span>
+ 		    </div>
+ 		    <div class="tile verde">
+ 		    </div>
+ 		    <div class="tile vermelho">
+ 		    </div>			
+ 		    <div class="tile tileLargo verde">
+ 		    </div>
+ 		    <div class="tile azul">
+ 		    </div>
+ 		    <div class="tile verde">
+ 		    </div>	
+			 <div class="tile verde">
+ 		    </div>
+ 		    <div class="tile vermelho">
+ 		    </div>			
+ 		    <div class="tile tileLargo verde">
+ 		    </div>
+ 		    <div class="tile azul">
+			</div>
+			<div class="tile tileLargo verde">
+ 		    </div>
+ 	    </div>
+     </div>
+ </div>
+ <!--<script>
+ $(function() {
+ var maiorLinha = 0;
+     $(".container .linha").each(function () {
+         var larguraLinha = 0;
+         $(this).children(".tile").each(function () {
+             larguraLinha += $(this).width();
+             larguraLinha += 2*parseInt($(this).css("margin-right").toString().replace("px", ""));
+         });
+         if (larguraLinha > maiorLinha)
+             maiorLinha = larguraLinha+5;
+     });
+     $(".container").css("width", maiorLinha.toString() + "px");
+	 
+	  $(".tile").mousedown(function () {
+		 $(this).addClass("selecionado");
+	 });
+	 
+	 $(".tile").mouseup(function () {
+		 $(this).removeClass("selecionado");
+	 });
+	 $(".tile").mouseleave(function () {
+		 $(this).removeClass("selecionado");
+	 });
+ });
+ </script>-->
+</body>
+</html>

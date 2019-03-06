@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<body>
+	  <canvas id="telaEmBranco" width="400" height="300"></canvas>
+</body>
+</html>
+
+<script type="text/javascript">
+	var canvas=document.getElementById("telaEmBranco");
+	var ctx=canvas.getContext("2d");
+	ctx.beginPath();
+	/*
+	Definindo um retângulo
+	Os dois primeiros números são coordenadas X e Y iniciais,
+	os seguintes são coordenadas finais
+	*/
+	ctx.rect(0,0,400,200);
+	//Desenhando o retângulo
+	ctx.stroke();
+
+	//Limpa para novo elemento gráfico.
+	ctx.beginPath();
+	//Definindo um arco.
+	ctx.arc(200,100,60,50,2*Math.PI);
+	//Definindo o preenchimento dele em vermelho.
+	ctx.fillStyle="red";
+	//Desenhando e preenchendo.
+	ctx.fill();
+
+	ctx.beginPath();
+	ctx.font="30px Arial";
+	// Aplicando o texto na imagem
+	ctx.fillText("Bandeira do Japão",70,250);
+</script>

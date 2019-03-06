@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Exemplo com Toques</title>
+	</head>
+	<style>
+		#quadrado {
+          width: 600px;
+          height: 370px;
+          border: 1px solid blue;
+          background-color: blue;
+          color: white;
+          text-align: center;
+          font-size: 40px;
+          padding-top: 130px;
+  } 
+	</style>
+	<body>
+     <div id='quadrado'></div>
+	</body>
+</html>
+<script type="text/javascript">
+		// Evento touchstart começa assim que a tela é tocada
+		document.getElementById ('quadrado').addEventListener('touchstart', 
+function(evento){
+     // targetTouches é uma lista de toques sobre a superfície toda
+     if (evento.touches.item(0) == evento.targetTouches.item(0)) {
+           document.getElementById('quadrado').innerHTML = "TOQUE 
+DETECTADO!";
+     }
+} , false);
+</script>

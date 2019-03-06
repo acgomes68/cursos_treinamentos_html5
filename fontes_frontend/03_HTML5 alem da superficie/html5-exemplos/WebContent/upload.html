@@ -1,0 +1,41 @@
+<DOCTYPE HTML>
+<html lang="pt-br"> 
+  <head>
+		<meta charset="UTF-8">
+		<title>Exemplo de Upload</title>	
+	 </head> 
+	 <body>       
+		<form id="formulario_upload">             
+			<input type="file" name="arquivo" id="arquivo" />
+			<input type="button" id="botao_upload" value="Upload" />
+		</form>      
+		<progress min="0" max="100" value="0">0% complete</progress> 
+	 </body>
+</html>
+<script type="text/JavaScript">
+var botao = document.getElementById("botao_upload");
+
+botao.onclick = function()
+{
+		var xhr2 = new XMLHttpRequest();
+		xhr2.open('POST', 'upload.php', true);
+		var arquivoInput = document.getElementById('arquivo');
+		//files[0] o elemento pode receber de um arquivo
+		var arquivo = arquivoInput.files[0];
+		// É carregado em um formulário FormData(), outra novidade
+		var formulario = new FormData();
+		formulario.append('arquivo', arquivo);
+		var progressBar = document.querySelector('progress');
+		xhr2.upload.onprogress = function(e)
+		{
+			// Verifica se o atributo lengthComputable existe
+        if (e.lengthComputable)
+        {
+				// Calcula percentual e carrega <progress>
+            	progressBar.value = (e.loaded / e.total) * 100;
+			} 
+		};
+		// Envia o formulário com o arquivo anexo.
+		xhr2.send(formulario);
+};
+</script>

@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+ <head>
+	  <meta charset="UTF-8">
+	  <title>Exemplo Acelerômetro</title>
+ </head>
+ <style>
+	#circulo {
+      width: 200px; height: 200px;
+      border-radius: 200px;
+      background-color: blue;
+      position: relative;
+	}
+	</style>
+	<body>
+	  		<div id="circulo"></div>
+	</body>
+</html>
+<script type="text/JavaScript">
+ //Verifica se o dispositivo+navegador possui suporte a acelerômetro
+ if (window.DeviceOrientationEvent) {
+   //Aplica o evento deviceorientation que será na função move()
+	  window.addEventListener("deviceorientation", move, true);
+	  function move(evento) {
+			 // Mostra coordenadas beta e gamma no console
+	    console.log('beta ', evento.beta, ' | gamma ', evento.gamma)
+	
+    if (evento.gamma > 0) {
+        document.getElementById('circulo').style.left = 
+			    (document.getElementById('circulo').offsetLeft + 1) + 'px';
+    } else {
+        document.getElementById('circulo').style.left = 
+			    (document.getElementById('circulo').offsetLeft - 20) + 'px';    
+    }
+4    if (evento.beta > 0) {
+        document.getElementById('circulo').style.top = 
+ 		    (document.getElementById('circulo').offsetTop + 1) + 'px';    
+    } else {
+        document.getElementById('circulo').style.top = 
+       (document.getElementById('circulo').offsetTop - 10) + 'px';    
+    }
+  } 
+ }
+ </script>

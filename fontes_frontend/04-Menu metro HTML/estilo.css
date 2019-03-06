@@ -1,0 +1,61 @@
+@font-face { font-family: Century; src: url('GOTHIC.ttf');}
+	 
+body{
+	font-family: Century;
+	background: rgb(51,51,51);
+	color: #fff;
+	padding:20px;
+}
+ 
+.pagina{
+	width:100%;
+	overflow-x:auto;
+}
+
+.linha{
+	width:auto;
+	padding:5px;
+	height:110px;
+	display:table;
+}
+
+.tile img{
+    width:56px;
+    margin:20px 22px 0 22px
+}
+
+.tileLargo img {
+    margin:20px 77px 0 77px
+}
+
+.tile{
+     height:100px;    
+     width:100px;   
+     float:left;
+     margin:0 5px 0 0;
+     padding:2px;
+ }
+ 
+ .tileLargo{
+     width:210px;
+ }
+
+ .amarelo{
+     background:#DAA520;
+ }
+ 
+ .vermelho{
+     background:#CD0000;   
+ }
+ 
+ .azul{
+     background:#4682B4;
+ }
+ 
+ .verde{
+     background-color: #2E8B57;
+ }
+
+ .selecionado{
+   background-color: #483D8B;
+}

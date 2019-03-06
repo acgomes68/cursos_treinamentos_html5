@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>HTML5 - Data Attributes</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<section>
+
+		<h1>Créditos</h1>
+		<p>Insira abaixo a quantidade de créditos que deseja comprar</p>
+
+		<form method="post">
+
+			<label>Créditos:</label>
+			<input type="number" name="credito" id="credito" min="10" required />
+			<small>Bônus de 10% nos valores a partir de R$50 e de 20% nos valores a partir de R$100</small>
+
+			<label class="bonus"></label>
+			<label class="total"></label>
+			<label class="status"></label>
+
+			<input type="submit" value="Enviar">
+
+		</form>
+
+	</section>
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
